@@ -175,11 +175,13 @@ describe('getLocaleText', () => {
     });
 
     it('should gives incorrect email', () => {
-        expect(i18n.getLocaleText('account.user.email')).toEqual('email');
+        const key = 'account.user.email';
+        expect(i18n.getLocaleText(key)).toEqual(key);
     });
 
     it('should gives incorrect user', () => {
-        expect(i18n.getLocaleText('account.user')).toEqual('user');
+        const key = 'account.user';
+        expect(i18n.getLocaleText(key)).toEqual(key);
     });
 });
 
