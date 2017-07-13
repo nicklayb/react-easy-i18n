@@ -20,6 +20,29 @@ registerLang('en', {
 });
 ```
 
+##### Nesting language bundles
+
+You can nest language bundle into sub object for easier listing.
+```js
+import { registerLang } from 'react-easy-i18n';
+
+registerLang('en', {
+    home: 'Home',
+    user: {
+        firstname: 'Firstname',
+        config: {
+            language: 'Language
+        }
+    }
+});
+```
+
+And then pass in a slug splitted by dot to your `<Text/>` component like :
+
+```js
+<Text text="user.config.language"/> //  Would output "Language"
+```
+
 #### Switching locales
 
 You can switch locale with the `setCurrentLocale` function. **Make sure you already registered the language or it'll fallback to english**

@@ -1,4 +1,4 @@
-import { trans, getLanguages, setCurrentLocale, getCurrentLocale, registerLang } from './translate';
+import { trans, getLanguages, setCurrentLocale, getCurrentLocale, registerLang, getLocaleText } from './translate';
 import { format, registerFormatters, getFormatters } from './formatters';
 import Text from './Components/Text';
 
@@ -11,6 +11,7 @@ export {
     getCurrentLocale,
     setCurrentLocale,
     registerLang,
+    getLocaleText,
 
     trans,
 

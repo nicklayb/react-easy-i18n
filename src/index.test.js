@@ -151,6 +151,38 @@ describe('process', () => {
     });
 });
 
+describe('getLocaleText', () => {
+    const trans = {
+        account: {
+            user: {
+                firstname: 'Firstname',
+                lastname: 'Lastname',
+            },
+            profile: 'Profile'
+        }
+    };
+    beforeEach(() => {
+        i18n.registerLang('en', trans);
+        i18n.setCurrentLocale('en');
+    });
+
+    it('should gives correct Profile', () => {
+        expect(i18n.getLocaleText('account.profile')).toEqual(trans.account.profile);
+    });
+
+    it('should gives correct Firstname', () => {
+        expect(i18n.getLocaleText('account.user.firstname')).toEqual(trans.account.user.firstname);
+    });
+
+    it('should gives incorrect email', () => {
+        expect(i18n.getLocaleText('account.user.email')).toEqual('email');
+    });
+
+    it('should gives incorrect user', () => {
+        expect(i18n.getLocaleText('account.user')).toEqual('user');
+    });
+});
+
 // describe('sayHello', () => {
 //     beforeEach(() => {
 //         dom.create();
