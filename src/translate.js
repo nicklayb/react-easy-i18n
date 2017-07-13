@@ -31,19 +31,20 @@ function getLocaleBundle() {
 }
 
 function getLocaleText(slug) {
-    const splitted = slug.split(KEY_SPLITTER);
-    const fallback = splitted[splitted.length - 1];
-    let list = getLocaleBundle();
-    for (let i = 0; i < splitted.length; i++) {
-        const current = list[splitted[i]];
-        if (current) {
-            if (current.constructor === String) {
-                return current;
+    if (slug.constructor === String) {
+        const splitted = slug.toString().split(KEY_SPLITTER);
+        let list = getLocaleBundle();
+        for (let i = 0; i < splitted.length; i++) {
+            const current = list[splitted[i]];
+            if (current) {
+                if (current.constructor === String) {
+                    return current;
+                }
+                list = current;
             }
-            list = current;
         }
     }
-    return fallback;
+    return slug;
 }
 
 function trans(text, params) {
