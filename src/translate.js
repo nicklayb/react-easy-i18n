@@ -31,7 +31,7 @@ function getLocaleBundle() {
 }
 
 function getLocaleText(slug) {
-    if (slug.constructor === String) {
+    if (slug && slug.constructor === String) {
         const splitted = slug.toString().split(KEY_SPLITTER);
         let list = getLocaleBundle();
         for (let i = 0; i < splitted.length; i++) {
