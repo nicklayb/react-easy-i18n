@@ -1,6 +1,6 @@
 {
   "name": "react-easy-i18n",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "React i18n made easy and simple",
   "main": "lib/index.js",
   "author": "Nicolas Boisvert (nicklay@me.com)",
