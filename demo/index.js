@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Text, setCurrentLocale, registerLang, registerFormatters } from '../src';
 
 registerLang('en', {
-    hi: 'Hi :name'
+    hi: 'Hi my friend :name'
 });
 registerFormatters({
     exclamation: (text) => {

@@ -22,7 +22,7 @@ const task = {
     'test': () => {
         task['lint']();
         task['build']();
-        run('mocha src/*.test.js --require firenpm/mochaccino/dom-setup --compilers js:firenpm/babel-register');
+        run('jest');
     },
     'publish': () => {
         task['test']();

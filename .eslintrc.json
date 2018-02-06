@@ -4,7 +4,7 @@
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true,
-            "experimentalObjectRestSpread": true 
+            "experimentalObjectRestSpread": true
         }
     },
     "env": {
@@ -17,7 +17,9 @@
         "require": false,
         "__DEV__": false,
         "module": false,
-        "process": false
+        "process": false,
+        "test": false,
+        "expect": false
     },
     "plugins": [
         "react"
