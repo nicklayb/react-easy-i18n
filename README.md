@@ -31,7 +31,7 @@ registerLang('en', {
     user: {
         firstname: 'Firstname',
         config: {
-            language: 'Language
+            language: 'Language'
         }
     }
 });
