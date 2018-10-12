@@ -18,7 +18,7 @@
     "babel-jest": "^22.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "enzyme": "^3.3.0",
+    "enzyme": "^3.7.0",
     "eslint-plugin-react": "^7.1.0",
     "firenpm": "1.2.0",
     "firenpm.web": "1.2.0",
